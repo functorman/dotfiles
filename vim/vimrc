@@ -28,11 +28,21 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'user/L9', {'name': 'newL9'}
 
 Plugin 'tpope/vim-sensible'
-Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-speeddating'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'scrooloose/nerdtree'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'Shougo/unite.vim'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'Shougo/neomru.vim'
+Plugin 'Shougo/unite-outline'
+Plugin 'Shougo/vimfiler.vim'
+Plugin 'Shougo/neossh.vim'
+Plugin 'Shougo/neosnippet.vim'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'nelstrom/vim-qargs'
 Plugin 'wting/rust.vim'
-Plugin 'elixir-lang/vim-elixir'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -52,3 +62,9 @@ filetype plugin indent on    " required
 
 set backspace=indent,eol,start
 syntax on
+set tabstop=4
+set shiftwidth=4
+
+" Use <backslash><C-m> to change vim's directory to current open file
+nnoremap <leader><C-m> :cd %:p:h<CR>
+
