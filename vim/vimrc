@@ -64,6 +64,11 @@ set backspace=indent,eol,start
 syntax on
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+autocmd FileType html setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files "
+autocmd FileType htmldjango setlocal sw=2 ts=2 sts=2
 
 " Use <backslash><C-m> to change vim's directory to current open file
 nnoremap <leader><C-m> :cd %:p:h<CR>
